@@ -150,41 +150,12 @@ The numerical simulations and data analysis support the following conclusions:
 
 ## Repository Structure
 
-```text
-.
 ├── README.md
 ├── LICENSE
 ├── CITATION.cff
 │
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── src/
-│   ├── mKJMA/
-│   ├── MBBG/
-│   ├── Richards/
-│   ├── local_avrami/
-│   ├── susceptibility/
-│   └── fractal_analysis/
-│
-├── simulations/
-│   ├── growth_curves/
-│   ├── model_comparison/
-│   └── parameter_analysis/
-│
-├── figures/
-│   ├── growth_kinetics/
-│   ├── local_avrami/
-│   ├── susceptibility/
-│   └── fractal_dimension/
-│
-└── scripts/
-    ├── reproduce_figures/
-    └── statistical_analysis/
-```
+└── Scripts
 
-The exact directory structure may be adapted according to the programming language and organization of the simulation codes.
 
 ---
 
@@ -209,66 +180,21 @@ The exact directory structure may be adapted according to the programming langua
 
 The numerical codes can be implemented and executed using the software environment associated with the repository.
 
-Example requirements:
 
-```text
-MATLAB R2022a or later
+MATLAB R2024a or later
 Statistics and Machine Learning Toolbox
-Optimization Toolbox
-Image Processing Toolbox
-```
 
-If Python scripts are included, a typical environment may require:
-
-```text
-Python >= 3.10
-NumPy
-SciPy
-Pandas
-Matplotlib
-scikit-image
-```
 
 Please adapt this section according to the final software dependencies of the repository.
 
 ---
 
-## Usage
-
-Clone the repository:
-
-```bash
-git clone <repository-url>
-cd <repository-name>
-```
-
-For MATLAB implementations, add the source directories to the MATLAB path:
-
-```matlab
-addpath(genpath('src'));
-```
-
-Run the main analysis script:
-
-```matlab
-run('scripts/main_analysis.m');
-```
-
-To reproduce the figures associated with the manuscript:
-
-```matlab
-run('scripts/reproduce_figures/reproduce_all_figures.m');
-```
-
-The exact script names should be updated according to the final repository structure.
-
----
 
 ## Reproducing the Analysis
 
 A typical computational workflow consists of the following steps:
 
-1. Load experimental or simulated tumor growth data.
+1. Simulated tumor growth data.
 2. Normalize the tumor growth curves.
 3. Fit the mKJMA, MBBG, and Richards models.
 4. Estimate the corresponding model parameters.
@@ -301,21 +227,7 @@ The computational framework may be useful in the following research areas:
 
 ---
 
-## Data
 
-The `data/` directory contains the datasets required to reproduce the analyses presented in the associated study.
-
-When applicable, data should be organized into:
-
-```text
-data/
-├── raw/          # Original datasets
-└── processed/    # Normalized or transformed datasets
-```
-
-The original data should remain unchanged in the `raw/` directory. All transformations and preprocessing procedures should be performed through reproducible scripts.
-
----
 
 ## Citation
 
@@ -323,31 +235,7 @@ If you use the code, methodology, numerical procedures, or data-analysis tools c
 
 > **Close Relationship and Role of Fractal Dimension, Heterogeneous Nucleation, Dynamic Transformations, and Cooperativity Mechanisms in Unperturbed Tumor Growth**
 
-BibTeX template:
-
-```bibtex
-@article{AuthorYearTumorGrowth,
-  title   = {Close Relationship and Role of Fractal Dimension,
-             Heterogeneous Nucleation, Dynamic Transformations
-             and Cooperativity Mechanisms in Unperturbed Tumor Growth},
-  author  = {Author(s)},
-  journal = {Journal Name},
-  year    = {Year},
-  volume  = {Volume},
-  pages   = {Pages},
-  doi     = {DOI}
-}
-```
-
 Please replace the bibliographic fields with the final publication information.
-
----
-
-## License
-
-This project is distributed under the license specified in the `LICENSE` file.
-
-Please consult the license terms before reusing, modifying, or redistributing the source code.
 
 ---
 
